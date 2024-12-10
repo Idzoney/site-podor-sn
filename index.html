@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITI - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo SITI">
+        </div>
+        <h1>Système d'Information Territorial pour l'Investissement</h1>
+        <p>(SITI - Département de Podor)</p>
+    </header>
+
+    <nav>
+        <div class="header-button">
+            <div><a href="#À propos de nous">À propos de nous</a></div>
+            <div><a href="#Actualités">Actualité</a></div>
+            <div>
+                <button onclick="showLogin()">Connexion</button>
+                <button onclick="showSignup()">Inscription</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Section Cartographie -->
+        <a href="cartographie.html" class="module">
+            <h2>Cartographie Interactive</h2>
+            <p>Explorez les ressources naturelles et les infrastructures.</p>
+        </a>
+
+        <!-- Section Projets d'investissement -->
+        <a href="projets.html" class="module">
+            <h2>Projets d'Investissement</h2>
+            <p>Consultez les projets et suivez leur avancement.</p>
+        </a>
+
+        <!-- Section Acteurs -->
+        <a href="acteurs.html" class="module">
+            <h2>Gestion des Acteurs</h2>
+            <p>Créez des profils et connectez-vous avec les partenaires locaux.</p>
+        </a>
+
+        <!-- Section Analyses -->
+        <a href="analyses.html" class="module">
+            <h2>Analyse et Simulation</h2>
+            <p>Utilisez des outils d'analyse pour évaluer les scénarios.</p>
+        </a>
+
+        <!-- Section Communication -->
+        <a href="communication.html" class="module">
+            <h2>Communication</h2>
+            <p>Recevez des newsletters et participez aux événements en ligne.</p>
+        </a>
+    </main>
+
+    <div class="form-container">
+        <h2>Contactez-nous</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+    </div>
+
+    <!-- Section pour la connexion -->
+    <div id="login-container" class="hidden form-container">
+        <h2>Connexion</h2>
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Mot de passe" required>
+        <button onclick="login()">Se connecter</button>
+        <p>
+            Pas encore inscrit ? <a href="#" onclick="showSignup()">Inscription</a>
+        </p>
+    </div>
+
+    <!-- Section pour l'inscription -->
+    <div id="signup-container" class="hidden form-container">
+        <h2>Inscription</h2>
+        <input type="text" id="signup-firstname" placeholder="Nom" required>
+        <input type="text" id="signup-lastname" placeholder="Prénom" required>
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="password" id="signup-password" placeholder="Mot de passe" required>
+        <button onclick="signup()">S'inscrire</button>
+        <p>
+            Déjà inscrit ? <a href="#" onclick="showLogin()">Connexion</a>
+        </p>
+    </div>
+
+    <footer>
+        &copy; 2024 SITI Podor - Tous droits réservés.
+    </footer>
+</body>
+</html>
